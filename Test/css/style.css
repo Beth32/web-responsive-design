@@ -1,7 +1,6 @@
-.text h1, h2 {
+h1 {
 	text-align: center;
 }
-
-.text p {
+.text-center {
 	text-align: center;
 }
