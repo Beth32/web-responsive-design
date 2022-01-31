@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/wp.jpg" type="img/wp.jpg" />
+
+    <title>Приватный Админ-чат</title>
+    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script src="https://comet-server.com/CometServerApi.js" type="text/javascript"></script>
+    
+    <style>
+    pre{
+        border: 1px solid #ccc;
+        padding: 5px;
+        background-color: #EEE;
+    }
+    /* monitors and laptops */
+@media screen and (min-width: 1240px) {}
+/* tablet */
+@media screen and (min-width: 1024px) and (max-width: 1240px) {}
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+/* mobile */
+@media screen and (max-width: 768px) {}
+/* iPad in portrait & landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+/* iPad in landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
+/* iPad in portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {}
+/* Retina iPad in portrait & landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
+/* Retina iPad in landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {}
+/* Retina iPad in portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+/* iPad 1 & 2 in portrait & landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1){}
+/* iPad 1 & 2 in landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {}
+/* iPad 1 & 2 in portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {}
+/* iPad mini in portrait & landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+/* iPad mini in landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {}
+/* iPad mini in portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {}
+/* iPhone 5 in portrait & landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {}
+/* iPhone 5 in landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {}
+/* iPhone 5 in portrait */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {}
+/* iPhone 2G-4S in portrait & landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+/* iPhone 2G-4S in landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {}
+/* iPhone 2G-4S in portrait */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {}
+/*iPhone 6 Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {}
+/*iPhone 6 landscape*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {}
+/*iPhone 6+ Portrait*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) {}
+/*iPhone 6+ landscape*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {}
+/*iPhone 6 and iPhone 6+ portrait and landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){}
+/*iPhone 6 and iPhone 6+ portrait*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){}
+/*iPhone 6 and iPhone 6+ landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){}
+/* CSS для Retina устройств */ @media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min--moz-device-pixel-ratio: 2),
+only screen and ( -o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) {/* CSS */}
+    </style>
+</head>
+<body>
+  <style>
+    body {
+      background: url(img/fon2.jpg)
+    }
+  </style>
+
+<div id="web_chat"></div>
+
+<div>
+  <style>
+    .adminchat h2 {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+      font-size: 32px;
+    }
+
+    .texttext h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .texttext p {
+      text-align: center;
+    }
+
+    .texttext h3 {
+      text-align: center;
+    }
+  </style>
+  <div class="adminchat"><h2>Приватный Админ-чат</h2></div>
+ Name :<input type="text" id="name" placeholder="Введите ваше имя"><br><br>
+ Text: <textarea id="text" placeholder="Введите текст"></textarea><br>
+ <input type="button" onclick="send();" value="Отправить" ><br>
+ <a href="info.html">Вход на сайт</a>
+</div>
+ <div class="texttext">
+
+    <h2><b><em>Тест на обзвон Администратора-Тестера(Заявку оставить здесь выше!)</em></b></h2>
+
+        <h3> Критерии на допуск: </h3>
+<p> 1. Быть подписаным на официальную группу Вконтакте <a href="https://vk.com/wprpmob "> https://vk.com/wprpmob </a> </p>
+<p> 2. Ваш возраст должен быть 12+ лет. </p>
+<p> 3. Знать хорошо русский язык. </p>
+<p> 4. Иметь базовые знания игры в САМП/КРМП. </p>
+<p> 5. Знать хорошо РП-термины(ДБ,ТК,СК,МП,ДМ) </p>
+<p> 6. Уметь отыгрывать РП-процесс. (/me /do /try /ame) </p>
+<p> 7. Вы не должны быть лидером или админом на другом проекте. </p>
+<p> 8. Уметь работать в коллективе( <b> ГЛАВНОЕ! </b> ) </p>
+<p> 9. Иметь хороший мощный телефон для игры. </p>
+  <h3>  И всё, далее заполните анкету </h3>
+    <h3><b> АНКЕТА(вместо пропусков вставляете ответ): </b></h3>
+<p> 1. Ваш возраст: … </p>
+<p> 2. Ваше ФИО: … </p>
+<p> 3. Сколько играете в КРМП? ... </p>
+<p> 4. Насколько по 10-ти бальной шкале оцениваете свою РП-игру? … </p>
+<p> 5. Почему хотите стать администратором? … </p>
+<p> 6. РП-термины. Что такое ДМ, ТК, СК, МГ, МП, БХ? </p>
+<p> 7.Подписаны на группу ВК? … </p>
+<p> 8. Ваш часовой пояс? … </p>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function()
+{ 
+    cometApi.start({node:"app.comet-server.ru", dev_id:15 })
+    
+    cometApi.subscription("simplechat.newMessage", function(event){
+        $("#web_chat").append('<b>'+HtmlEncode(event.data.name)+'</b>')
+        $("#web_chat").append('<pre>'+HtmlEncode(event.data.text)+'</pre>')
+        $("#web_chat").append('<br>')
+    })
+})
+
+function HtmlEncode(s)
+{
+  var el = document.createElement("div");
+  el.innerText = el.textContent = s;
+  s = el.innerHTML;
+  return s;
+}
+
+    
+function send()
+{
+   var name = $('#name').val();
+   var text = $('#text').val();
+   
+   $.ajax({
+        url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
+        type: "POST", 
+        data:"text="+encodeURIComponent(text)+"&name="+encodeURIComponent(name)
+   });
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
